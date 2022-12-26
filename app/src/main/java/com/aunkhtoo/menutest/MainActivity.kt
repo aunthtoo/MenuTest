@@ -67,13 +67,13 @@ class MainActivity : AppCompatActivity() {
     val itemId1 = 100
     val itemId2 = 101
 
-    val menu = binding.navView.menu
+    val menu = binding.navView.menu.findItem(R.id.list1).subMenu
 
-    val menuItem1 = menu.add(R.id.menu_group, itemId1, 1, "Menu 1")
-    menuItem1.setIcon(R.drawable.baseline_adb_24)
+    val menuItem1 = menu?.add(R.id.menu_group, itemId1, 1, "Menu 1")
+    menuItem1?.setIcon(R.drawable.baseline_adb_24)
 
-    val menuItem2 = menu.add(R.id.menu_group, itemId2, 2, "Menu 2")
-    menuItem2.setIcon(R.drawable.baseline_accessibility_24)
+    val menuItem2 = menu?.add(R.id.menu_group, itemId2, 2, "Menu 2")
+    menuItem2?.setIcon(R.drawable.baseline_accessibility_24)
 
   }
 }
